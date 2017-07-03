@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="WriterMapper"> 
+ <resultMap type="com.choa.writer.WriterDTO" id="WriterDTO"></resultMap>
+ 
+ 
+ 	<insert id="join" statementType="CALLABLE" parameterType="java.util.Map">
+ 	{ call writer_join(#{memberDTO.id, mode=IN},#{memberDTO.pw, mode=IN},#{memberDTO.name,mode=IN},#{memberDTO.age,mode=IN},#{memberDTO.sung,mode=IN},#{memberDTO.classfy,mode=IN},#{result, mode=OUT, javaType=int, jdbcType=INTEGER}) }
+ 	</insert>
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ </mapper> 
