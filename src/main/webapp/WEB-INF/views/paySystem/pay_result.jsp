@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
+	pay_result
+	<hr>
+	${message}
 </body>
 </html>

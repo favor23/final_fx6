@@ -27,7 +27,7 @@ public class paySystemController {
 	
 	@RequestMapping(value="paypost")
 	public void paypost(){		
-	}
+	}	
 	
 	@RequestMapping(value="bank", method=RequestMethod.POST)
 	public String bank(String cardNum1, String cardNum2, String cardNum3, String cardNum4, Model model){		
@@ -35,6 +35,6 @@ public class paySystemController {
 		 Bank bank_ck=new Bank();
 		 String message=bank_ck.number_ck(str);
 		 model.addAttribute("message", message);
-		 return "pay_result";
+		 return "/paySystem/pay_result";
 	}
 }
