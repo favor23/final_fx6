@@ -2,7 +2,7 @@ package com.choa.customer;
 
 import com.choa.member.MemberDTO;
 
-public class CostomerDTO extends MemberDTO {
+public class CustomerDTO extends MemberDTO {
 	private String id;
 	private String phone;
 	private String email;
