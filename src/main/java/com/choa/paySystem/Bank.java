@@ -31,9 +31,9 @@ public class Bank {
 	        }
 	        
 	        if(sum%10 == 0){
-	         message="correct";
+	         message="올바른 카드번호";
 	      } else {
-	         message="incorrect";
+	         message="잘못된 카드번호";
 	      }
 	      
 	      return message;

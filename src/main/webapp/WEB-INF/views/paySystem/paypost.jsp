@@ -58,6 +58,7 @@ $(function() {
 						alert("cvc를 입력해주세요");
 					}
 					else{
+						$("#frm").attr("action","bank");
 						$("#frm").submit();	
 					}
 				}
@@ -75,7 +76,7 @@ $(function() {
 </script>
 </head>
 <body>	
-	<form id="frm" action="bank" method="post">
+	<form id="frm" action="" method="post">
 	<%-- <input type="hidden" name="name" value="${param.name}">
 	<input type="hidden" name="address" value="${param.address}">
 	<input type="hidden" name="phone" value="${param.phone}">

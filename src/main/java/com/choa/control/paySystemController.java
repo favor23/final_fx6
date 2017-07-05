@@ -1,9 +1,11 @@
-package com.choa.paySystem;
+package com.choa.control;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.choa.paySystem.Bank;
 
 @Controller
 @RequestMapping(value="/paySystem")
@@ -27,14 +29,5 @@ public class paySystemController {
 	
 	@RequestMapping(value="paypost")
 	public void paypost(){		
-	}	
-	
-	@RequestMapping(value="bank", method=RequestMethod.POST)
-	public String bank(String cardNum1, String cardNum2, String cardNum3, String cardNum4, Model model){		
-		 String str = cardNum1 + cardNum2 + cardNum3 + cardNum4;
-		 Bank bank_ck=new Bank();
-		 String message=bank_ck.number_ck(str);
-		 model.addAttribute("message", message);
-		 return "/paySystem/pay_result";
-	}
+	}		
 }
