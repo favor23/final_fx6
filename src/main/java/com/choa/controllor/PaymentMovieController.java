@@ -1,4 +1,4 @@
-package com.choa.control;
+package com.choa.controllor;
 
 import javax.inject.Inject;
 
@@ -15,7 +15,8 @@ import com.choa.payment.movie.PaymentMovieServiceImpl;
 public class PaymentMovieController {
 	
 	@Inject
-	private PaymentMovieServiceImpl paymentMovieService;	
+	private PaymentMovieServiceImpl paymentMovieServiceImpl;
+	
 	
 	
 	@RequestMapping(value="movie_bank", method=RequestMethod.POST)
@@ -25,7 +26,7 @@ public class PaymentMovieController {
 		 String message=bank_ck.number_ck(str);
 		 int result=0;
 		 if(message.equals("올바른 카드번호")){
-			result=paymentMovieService.insert(paymentDTO);
+			result=paymentMovieServiceImpl.insert(paymentDTO);
 			if(result==0){
 				message="결제성공";
 			}

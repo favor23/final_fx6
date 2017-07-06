@@ -3,6 +3,8 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
- <mapper namespace="PaymentMoviceMapper"> 
- 	
+ <mapper namespace="PaymentMovieMapper"> 
+	<insert id="insert" statementType="CALLABLE" parameterType="java.util.Map">
+ 		{ call payMovie_insert(#{dto.id, mode=IN}, #{dto.money, mode=IN}, #{dto.type, mode=IN}, #{dto.movie_num, mode=IN}, #{result, mode=OUT, javaType=int, jdbcType=INTEGER})  }
+ 	</insert> 
  </mapper> 

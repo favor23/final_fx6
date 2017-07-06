@@ -1,5 +1,8 @@
 package com.choa.payment.support;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
@@ -17,8 +20,11 @@ public class PaymentSupportDAOImpl implements PaymentDAO{
 	
 	@Override
 	public int pay_start(PaymentDTO paymentDTO) throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+		Map<String, Object> map=new HashMap<String, Object>();
+		map.put("dto", paymentDTO);
+		sqlSession.insert(NAMESPACE+"insert", map);
+		int result=(Integer)map.get("result");
+		return result;
 	}
 
 	@Override

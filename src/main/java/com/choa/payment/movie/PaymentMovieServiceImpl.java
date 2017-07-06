@@ -2,6 +2,7 @@ package com.choa.payment.movie;
 
 import javax.inject.Inject;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.choa.payment.PaymentDTO;
@@ -10,14 +11,12 @@ import com.choa.payment.PaymentService;
 @Service
 public class PaymentMovieServiceImpl implements PaymentService {
 
-	@Inject
-	private PaymentMovieDAOImpl paymentMovieDAO;
+	@Autowired
+	private PaymentMovieDAOImpl paymentMovieDAOImpl;
 	
 	@Override
 	public int insert(PaymentDTO paymentDTO) throws Exception {
-		int result=paymentMovieDAO.pay_start(paymentDTO);
-		
-		return result;		
+		return paymentMovieDAOImpl.pay_start(paymentDTO);				
 	}
 
 	@Override

@@ -1,16 +1,18 @@
-package com.choa.control;
+package com.choa.controllor;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.choa.paySystem.Bank;
-
 @Controller
 @RequestMapping(value="/paySystem")
 public class paySystemController {
-
+	
+	@RequestMapping(value="aaa")
+	public void aaa(){		
+	}
+	
 	@RequestMapping(value="pay24")
 	public void pay24(){		
 	}

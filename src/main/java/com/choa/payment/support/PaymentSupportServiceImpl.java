@@ -11,12 +11,11 @@ import com.choa.payment.PaymentService;
 public class PaymentSupportServiceImpl implements PaymentService{
 
 	@Inject
-	private PaymentSupportDAOImpl paymentSupportDAO;
+	private PaymentSupportDAOImpl paymentSupportDAOImpl;
 	
 	@Override
 	public int insert(PaymentDTO paymentDTO) throws Exception {
-		return 0;
-		
+		return paymentSupportDAOImpl.pay_start(paymentDTO);		
 		
 	}
 
