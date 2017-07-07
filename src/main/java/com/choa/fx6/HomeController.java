@@ -36,4 +36,19 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping(value="/index")
+	public void index(){}
+	
+	@RequestMapping(value="/index_movielist/m1")
+	public void m1(){}
+	
+	@RequestMapping(value="/index_movielist/m2")
+	public void m2(){}
+	
+	@RequestMapping(value="/index_movielist/m3")
+	public void m3(){}
+	
+	@RequestMapping(value="/index_movielist/m4")
+	public void m4(){}
+	
 }
