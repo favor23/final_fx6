@@ -5,13 +5,13 @@
 	<div id="div2_warp">
 		<div id="div2_list">
 			<ul>
-				<li  class="mouse_action" title="1">박스오피스</li>
-						<li id="action" class="mouse_action" title="2">최신개봉작</li>
-						<li class="mouse_action" title="3">상영예정작</li>
-						<li class="mouse_action" title="4">큐레이션</li>
+				<li  class="mouse_action" accesskey="1">박스오피스</li>
+						<li id="action" class="mouse_action" accesskey="2">최신개봉작</li>
+						<li class="mouse_action" accesskey="3">상영예정작</li>
+						<li class="mouse_action" accesskey="4">큐레이션</li>
 			</ul>
 		</div>
-		<a href="#" style="float: right; margin-right: 140px;">+전체보기</a>
+			<span accesskey="2" class="allview_span">+ 전체보기</span>
 		<div id="myCarousel2" class="carousel slide">
 			<!-- Indicators -->
 			<!-- Wrapper for slides -->
@@ -27,7 +27,7 @@
 								</div>
 								<div class="list_div">
 									<div class="list_div_name">
-										<img src=""><a href="#">스파이더맨</a>
+										<span class="film_rate age_19"></span><a href="#">너의 이름은</a>
 									</div>
 									<button class="btn-info list_a">상세보기</button>
 									<button class="btn-info list_a">예매하기</button>
@@ -47,7 +47,7 @@
 								</div>
 								<div class="list_div">
 									<div class="list_div_name">
-										<img src=""><a href="#">스파이더맨</a>
+										<span class="film_rate age_19"></span><a href="#">너의 이름은</a>
 									</div>
 									<button class="btn-info list_a">상세보기</button>
 									<button class="btn-info list_a">예매하기</button>

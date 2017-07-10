@@ -73,10 +73,9 @@ header {
 }
 
 #myCarousel img {
-	width: 100%;
-	height: auto;	
-	max-height: 600px;
-	overflow: hidden;
+	width: 1600px; 
+	height: 600px; 
+	margin:0 auto;
 }
 
 #main_div2 {
@@ -185,9 +184,64 @@ filter: gray;
 	padding: 0;
 	margin: 0;
 	text-indent: -9999px;
-	background: url(http://image2.megabox.co.kr/mop/home/movie/rank.png) 0 0
+	background: url("/fx6/img/index/rank.png") 0 0
 		no-repeat;
 }
+.boxoffice.n2 {
+    background-position: 0 -100px;
+}
+.boxoffice.n3 {
+    background-position: 0 -200px;
+}
+.boxoffice.n4 {
+    background-position: 0 -300px;
+}
+.boxoffice.n5 {
+    background-position: 0 -400px;
+}
+.boxoffice.n6 {
+    background-position: 0 -500px;
+}
+.boxoffice.n7 {
+    background-position: 0 -600px;
+}
+.boxoffice.n8 {
+    background-position: 0 -700px;
+}
+
+
+
+
+.film_rate {
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -9999px;
+    margin: -3px 10px 0 0;
+    width: 20px;
+    height: 21px;
+    vertical-align: middle;
+    background: url("/fx6/img/index/btn_movie.png") 0 -200px no-repeat;
+}
+
+.age_12 {
+    background-position: -60px -200px;
+}
+.age_15 {
+    background-position: -90px -200px;
+}
+.age_19 {
+    background-position: -30px -200px;
+}
+
+
+
+
+
+
+
+
+
+
 
 #main_div3{
 	height: 819px;
@@ -231,6 +285,12 @@ filter: gray;
 	border:1px solid black;
 	float: left;
 }
+.allview_span{
+	float: right;
+	margin-right: 140px;
+	cursor: pointer;
+	z-index: 1;
+}
 /* =======================footer================================== */
 footer{
 	height: 590px;
@@ -273,8 +333,15 @@ footer{
 			<li class="header_li">특별관</li>
 			<li class="header_li">스토어</li>
 			<li class="header_li">이벤트</li>
+			<c:if test="${empty member}">
 			<li id="bar_login">로그인</li>
+			</c:if>
+			<%-- <c:if test="${!empty member}">
+			<li id="bar_login"><img alt="" src=""> ${member.name}님<a href="#">로그아웃</a></li>
+			</c:if> --%>
+			
 			</ui>
+			
 		</div>
 	</header>
 	<!-- header end -->
@@ -357,13 +424,13 @@ footer{
 			<div id="div2_warp">
 				<div id="div2_list">
 					<ul>
-						<li id="action" class="mouse_action" title="1">박스오피스</li>
-						<li class="mouse_action" title="2">최신개봉작</li>
-						<li class="mouse_action" title="3">상영예정작</li>
-						<li class="mouse_action" title="4">큐레이션</li>
+						<li id="action" class="mouse_action" accesskey="1">박스오피스</li>
+						<li class="mouse_action" accesskey="2">최신개봉작</li>
+						<li class="mouse_action" accesskey="3">상영예정작</li>
+						<li class="mouse_action" accesskey="4">큐레이션</li>
 					</ul>					
 				</div>
-				<a href="#" style="float: right;margin-right: 140px;">+전체보기</a>
+				<span accesskey="1" class="allview_span">+ 전체보기</span>
 				<div id="myCarousel2" class="carousel slide">
 					<!-- Indicators -->
 					<!-- Wrapper for slides -->
@@ -379,7 +446,7 @@ footer{
 										</div>
 										<div class="list_div">
 											<div class="list_div_name">
-												<img src=""><a href="#">스파이더맨</a>
+												<span class="film_rate age_12"></span><a href="#">스파이더맨</a>
 											</div>
 											<button class="btn-info list_a">상세보기</button>
 											<button class="btn-info list_a">예매하기</button>
@@ -391,7 +458,7 @@ footer{
 
 						<div class="item">
 							<ul class="div2_mvlist" style="padding-left: 150px;">
-								<c:forEach begin="1" end="4" var="i">
+								<c:forEach begin="5" end="8" var="i">
 									<li>
 										<div class="list_img">
 											<span class="boxoffice n${i}">0${i}</span> <img
@@ -399,7 +466,7 @@ footer{
 										</div>
 										<div class="list_div">
 											<div class="list_div_name">
-												<img src=""><a href="#">스파이더맨</a>
+												<span class="film_rate age_12"></span> <a href="#">스파이더맨</a>
 											</div>
 											<button class="btn-info list_a">상세보기</button>
 											<button class="btn-info list_a">예매하기</button>
@@ -497,7 +564,7 @@ footer{
 	<script type="text/javascript">
 	
 	$("#main_div2").on("click",".mouse_action",function(){
-		var num=$(this).attr("title");
+		var num=$(this).attr("accesskey");
 		$.ajax({
 			url:"./index_movielist/m"+num,
 			type:"GET",
