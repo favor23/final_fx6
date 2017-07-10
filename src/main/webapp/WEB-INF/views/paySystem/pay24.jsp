@@ -4,8 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link href="<c:url value="/css/bootstrap.min.css" />" rel="stylesheet">
+<c:import url="../temp/bootStrap.jsp"/>
 <title>Insert title here</title>
 <style type="text/css">
 .main_wrap{
@@ -36,6 +35,7 @@ a{
 </style>
 </head>
 <body>
+<c:import url="../temp/header.jsp"/>
 <section class="main_section">
 	<section class="main_wrap">
 		<img src="<c:url value="/img/jsimg/pay2img.PNG"/>">
@@ -90,6 +90,7 @@ a{
 		</form>		
 	</section>
 </section>
+<c:import url="../temp/footer.jsp"/>
 <script type="text/javascript">
 var qqq=0;
 $("#btn_point").click(function(){

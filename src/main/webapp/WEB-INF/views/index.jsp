@@ -4,15 +4,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%-- <link href="<c:url value="/css/reset.css" />" rel="stylesheet">
-<link href="<c:url value="/css/header.css" />" rel="stylesheet">
-<link href="<c:url value="/css/footer.css" />" rel="stylesheet">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> --%>
 <c:import url="temp/bootStrap.jsp"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
@@ -247,31 +238,6 @@ filter: gray;
 	cursor: pointer;
 	z-index: 1;
 }
-/* =======================footer================================== */
-footer{
-	height: 590px;
-	width: 100%;
-	
-}
-#footer_div1{
-	height: 66%;
-	width: 100%;
-	background-color: #3A3A3A;
-}
-#footer_div2{
-	height: 34%;
-	width: 100%;
-	background-color: #161616;
-	border: 1px solid black; 
-}
-
-.footer_wrap{
-	height: 100%;
-	width: 960px;
-	background-color: gray;
-	margin: 0 auto;
-}
-
 </style>
 </head>
 <body>
