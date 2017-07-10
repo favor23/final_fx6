@@ -42,6 +42,18 @@ public class HomeController {
 	public void index(){	
 	}
 	
+	@RequestMapping(value="/temp/header")
+	public void header(){	
+	}
+	
+	@RequestMapping(value="/temp/footer")
+	public void footer(){	
+	}
+	
+	@RequestMapping(value="/temp/bootStrap")
+	public void bootStarp(){	
+	}
+	
 	@RequestMapping(value="/index_movielist/m1")
 	public void m1(){}
 	

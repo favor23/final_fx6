@@ -4,19 +4,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%-- <link href="<c:url value="/css/reset.css" />" rel="stylesheet">
-<link href="<c:url value="/css/header.css" />" rel="stylesheet">
-<link href="<c:url value="/css/footer.css" />" rel="stylesheet">
+<link href="<c:url value="/css/reset.css" />" rel="stylesheet">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> --%>
-<c:import url="temp/bootStrap.jsp"/>
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
+a{
+	cursor: pointer;
+}
+li {
+	list-style-type: none;	
+}
+
+header {
+    position: fixed;
+    height: 50px;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 1000;
+}
+
+#header_bar {
+	height: 50px;
+	width: 960px;
+	margin: 0 auto;
+}
+
+.header_li {
+	height: 49px;
+	width: 107px;
+	cursor: pointer;
+}
+
+#bar_logo {
+	height: 49px;
+	width: 160px;
+}
+
+#bar_login {
+	height: 49px;
+	width: 157px;
+	cursor: pointer;
+}
+
+#header_bar li {
+	line-height: 49px;
+	text-align: center;
+	border-right: 1px solid #e5e5e5;
+	float: left;
+	font-weight: bold;
+}
 /* ===========================main start ===================================*/
 #main_section {
 	height: 2200px;
@@ -273,9 +317,34 @@ footer{
 }
 
 </style>
+<script type="text/javascript">
+	
+</script>
 </head>
 <body>
-	<c:import url="temp/header.jsp"/>
+	<!-- header start -->
+	<header>
+		<div id="header_bar">
+			<ui>
+			<li id="bar_logo">이미지로그</li>
+			<li class="header_li">영화</li>
+			<li class="header_li">큐레이션</li>
+			<li class="header_li">영화관</li>
+			<li class="header_li">특별관</li>
+			<li class="header_li">스토어</li>
+			<li class="header_li">이벤트</li>
+			<c:if test="${empty member}">
+			<li id="bar_login">로그인</li>
+			</c:if>
+			<%-- <c:if test="${!empty member}">
+			<li id="bar_login"><img alt="" src=""> ${member.name}님<a href="#">로그아웃</a></li>
+			</c:if> --%>
+			
+			</ui>
+			
+		</div>
+	</header>
+	<!-- header end -->
 	<!-- main start -->
 	<section id="main_section">
 		<section id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -485,7 +554,10 @@ footer{
 	</section>
 	<!-- main end -->
 	<!-- footer start -->
-	<c:import url="temp/footer.jsp"/>
+	<footer>
+		<div id="footer_div1"><div class="footer_wrap"></div></div>
+		<div id="footer_div2"><div class="footer_wrap"></div></div>
+	</footer>
 	<!-- footer end -->
 	
 	
